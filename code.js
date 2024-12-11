@@ -29,6 +29,11 @@ document.getElementById('form').addEventListener('submit', function(event) {
         alert('Імя має містити тільки букви!');
         return;
     }
+    const hasLetterSurname = /[a-zA-Z]/.test(name);
+    if (!hasLetterSurname) {
+        alert('Прізвище має містити тільки букви!');
+        return;
+    }
 
     alert('Форма успішно заповнена!');
     this.submit(); 
