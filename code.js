@@ -23,9 +23,10 @@ document.getElementById('form').addEventListener('submit', function(event) {
         alert('Пароль має містити хоча б одну букву і одну цифру!');
         return;
     }
-    const hasLetterName = /[a-zA-Z]/.test(password);
-    if (!hasLetterName ) {
-        alert('Імя має бути містити тількі літери ');
+    
+    const hasLetterName = /[a-zA-Z]/.test(name);
+    if (!hasLetterName) {
+        alert('Імя має містити тільки букви!');
         return;
     }
 
