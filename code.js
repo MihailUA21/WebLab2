@@ -16,7 +16,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
         alert('Пароль має містити мінімум 8 символів!');
         return;
     }
-    const hasLetter = /[a-zA-Z]/.test(password);
+    const hasLetter = /[a-zA-Zа-яА-Я]/.test(password);
     const hasNumber = /\d/.test(password);
 
     if (!hasLetter || !hasNumber) {
@@ -24,12 +24,12 @@ document.getElementById('form').addEventListener('submit', function(event) {
         return;
     }
     
-    const hasLetterName = /[a-zA-Z]/.test(name);
+    const hasLetterName = /[a-zA-Zа-яА-Я]/.test(name);
     if (!hasLetterName) {
         alert('Імя має містити тільки букви!');
         return;
     }
-    const hasLetterSurname = /[a-zA-Z]/.test(name);
+    const hasLetterSurname = /[a-zA-Zа-яА-Я]/.test(name);
     if (!hasLetterSurname) {
         alert('Прізвище має містити тільки букви!');
         return;
